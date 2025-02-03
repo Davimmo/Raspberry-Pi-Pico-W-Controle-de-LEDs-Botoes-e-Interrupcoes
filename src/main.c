@@ -41,9 +41,6 @@ int main() {
             // 100ms ligado
             // 100ms desligado
         blink_led(LED_RED, 100, 5);
-        printf("led terminou de piscar\n");
-        sleep_ms(3000);
-        
     }
     return 0;
 }

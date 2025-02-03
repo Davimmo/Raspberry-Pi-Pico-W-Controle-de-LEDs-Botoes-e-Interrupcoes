@@ -12,9 +12,18 @@ void gpio_irq_handler(uint gpio, uint32_t events) {
         // tratamento de debouncing dos botões
         if(!debouncing(300))
             return;
+        // Habilita a entrada do modo BOOTSELL ao pressionar JOYSTICK_BUTTON
+        if(gpio == JOYSTICK_BUTTON)
+            reset_usb_boot(0,0);
         // avança para o próximo número (máximo 9)
-        if(gpio == BUTTON_1){
-
-        }
+        if(gpio == BUTTON_1 && actual_number < 9)
+            actual_number++;
+        // recua para o número anterior (mínimo 0)
+        if(gpio == BUTTON_2 && actual_number)
+            actual_number--;
+        // atualiza a matriz de leds
+        set_one_led(numbers[actual_number], led_r, led_g, led_b);
+        // log de depuração
+        printf("Contador: %d\n", actual_number);
     }
 }
