@@ -37,17 +37,24 @@ Este projeto foi desenvolvido no âmbito do **Embarcatech**, dentro do curso **F
 
 ## Dependências e Bibliotecas Utilizadas
 
-O código utiliza as seguintes bibliotecas:
+O código utiliza as seguintes bibliotecas presentes na pasta "lib":
 
 ```c
 #include "lib/led.h"       // Manipulação de LEDs
 #include "lib/button.h"    // Configuração e uso de botões
 #include "lib/interrupt.h" // Manipulação de interrupções
 #include "lib/matrix.h"    // Controle da matriz de LEDs WS2812
-#include "pico/stdlib.h"  // Biblioteca padrão da Raspberry Pi Pico
-#include "hardware/pwm.h"  // Controle de PWM
-#include "hardware/pio.h"  // Manipulação de PIO
 #include "ws2812.pio.h"    // Controle de LEDs WS2812
+```
+
+Além de outras bibliotecas como:
+
+```c
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/pwm.h"
+#include "hardware/pio.h"
+#include "ws2812.pio.h"
 ```
 
 ### Dependências do Projeto
