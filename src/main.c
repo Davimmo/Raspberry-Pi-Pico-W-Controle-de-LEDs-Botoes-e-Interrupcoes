@@ -24,8 +24,8 @@ int main() {
     init_led(LED_RED);
     
     // Inicialização do botões e configuração de eventos de interrupção
-    init_button_with_interrupt(BUTTON_1, GPIO_IRQ_EDGE_FALL, true);
-    init_button_with_interrupt(BUTTON_2, GPIO_IRQ_EDGE_FALL, true);
+    init_button_with_interrupt(BUTTON_A, GPIO_IRQ_EDGE_FALL, true);
+    init_button_with_interrupt(BUTTON_B, GPIO_IRQ_EDGE_FALL, true);
     init_button_with_interrupt(JOYSTICK_BUTTON, GPIO_IRQ_EDGE_FALL, true);
   
     PIO pio = pio0;
